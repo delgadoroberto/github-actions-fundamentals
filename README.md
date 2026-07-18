@@ -2,7 +2,7 @@
 
 [![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF?logo=githubactions&logoColor=white)](https://github.com/features/actions)
 [![YAML](https://img.shields.io/badge/YAML-Configuration-red?logo=yaml)](https://yaml.org/)
-[![CI](https://img.shields.io/badge/CI-Continuous%20Integration-blue)](https://github.com/features/actions)
+[![GitHub Actions Fundamentals](https://github.com/delgadoroberto/github-actions-fundamentals/actions/workflows/basic-pipeline.yml/badge.svg)](https://github.com/delgadoroberto/github-actions-fundamentals/actions/workflows/basic-pipeline.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A hands-on laboratory designed to introduce the core concepts of **GitHub Actions** by building Continuous Integration (CI) workflows from scratch.
