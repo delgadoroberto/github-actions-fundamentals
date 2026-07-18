@@ -1,33 +1,62 @@
-name: Basic Pipeline
+name: GitHub Actions Fundamentals
 
 on:
   push:
+    branches:
+      - main
+
+  workflow_dispatch:
 
 jobs:
-  test-job:
+  fundamentals:
+    name: GitHub Actions Basics
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Show current date
-        run: date
+      - name: Display Runner Information
+        run: |
+          echo "===== Runner Information ====="
+          echo "Date: $(date)"
+          echo "User: $(whoami)"
+          echo "Hostname: $(hostname)"
+          echo "Operating System:"
+          cat /etc/os-release
 
-      - name: Show current user
-        run: whoami
+      - name: Display Development Tools
+        run: |
+          echo "===== Installed Tools ====="
+          echo "Python: $(python3 --version)"
+          echo "Git: $(git --version)"
+          echo "Bash: $(bash --version | head -n 1)"
 
-      - name: Show Ubuntu version
-        run: cat /etc/os-release
+      - name: Show Repository Contents
+        run: |
+          echo "===== Repository Files ====="
+          ls -lah
 
-      - name: Show Python version
-        run: python3 --version
+      - name: Create Sample Artifact
+        run: |
+          mkdir -p output
+          echo "GitHub Actions Fundamentals Lab" > output/lab-info.txt
+          echo "Execution Date: $(date)" >> output/lab-info.txt
+          echo "Workflow: ${{ github.workflow }}" >> output/lab-info.txt
+          echo "Repository: ${{ github.repository }}" >> output/lab-info.txt
+          echo "Triggered by: ${{ github.actor }}" >> output/lab-info.txt
 
-      - name: Create temporary file
-        run: touch test-file.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab-information
+          path: output/lab-info.txt
 
-      - name: List files
-        run: ls -la
-
-      - name: Finish pipeline
-        run: echo "Pipeline completed successfully"
+      - name: Workflow Summary
+        run: |
+          echo "=================================="
+          echo "Workflow completed successfully."
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "=================================="
