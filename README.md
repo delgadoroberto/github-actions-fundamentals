@@ -2,7 +2,7 @@
 
 [![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF?logo=githubactions&logoColor=white)](https://github.com/features/actions)
 [![YAML](https://img.shields.io/badge/YAML-Configuration-red?logo=yaml)](https://yaml.org/)
-[![CI](https://img.shields.io/badge/CI-Continuous%20Integration-blue)]()
+[![CI](https://img.shields.io/badge/CI-Continuous%20Integration-blue)](https://github.com/features/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A hands-on laboratory designed to introduce the core concepts of **GitHub Actions** by building Continuous Integration (CI) workflows from scratch.
@@ -67,7 +67,7 @@ github-actions-fundamentals/
 
 # Workflow Architecture
 
-```
+```text
 Developer Push
         │
         ▼
@@ -125,6 +125,7 @@ The current workflow demonstrates:
 - Display Python version
 - Create a temporary file
 - List repository contents
+- Upload an artifact
 - Finish successfully
 
 ---
@@ -136,6 +137,7 @@ After each push:
 - The workflow starts automatically.
 - A GitHub-hosted Ubuntu runner is provisioned.
 - Every configured step executes sequentially.
+- An artifact is generated and uploaded.
 - The workflow finishes successfully.
 - Logs are available under the **Actions** tab.
 
@@ -172,7 +174,7 @@ Additional documentation is available in the `docs/` directory.
 
 Workflow execution screenshots will be added after completing each module.
 
-```
+```text
 docs/screenshots/
 ```
 
@@ -197,7 +199,7 @@ Some planned enhancements include:
 
 Contributions, improvements, and suggestions are welcome.
 
-Please read the `CONTRIBUTING.md` guide before submitting a pull request.
+Please read the `CONTRIBUTING.md` guide before submitting a Pull Request.
 
 ---
 
