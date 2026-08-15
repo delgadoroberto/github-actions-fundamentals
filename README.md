@@ -206,11 +206,3 @@ Please read the `CONTRIBUTING.md` guide before submitting a Pull Request.
 # License
 
 This project is licensed under the MIT License.
-
----
-
-# Author
-
-**Roberto Delgado**
-
-Cybersecurity Engineer
